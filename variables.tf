@@ -13,3 +13,7 @@ variable "Production"{
 variable "vpc-cidr"{
 	type = string
 }
+
+variable "private_subnet_cidr"{
+	type = string
+}
