@@ -14,10 +14,7 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"] # imageowner
 }
 
-resource "aws_instance" "bastion" {
-  ami           = data.aws_ami.ubuntu.id
-  instance_type = "t2.micro"
-  vpc_security_group_ids = [aws_security_group.my_security_group.id]
-  subnet_id = aws_subnet.private_subnet.id
-
- }
+resource "aws_key_pair" "ssh-key"{
+   key_name   = "ssh-key"
+   public_key  = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCxD+yhoRCfvd/4IVjtGdvj09wuRdwNat/AHOiB/AqELL6k0RL6qxMATPJB/c67SCoaWT1sclw8Ikbjr6NoI3OZnqNfug0CLXukBk7b7pLZOuW+nfkrCuYpPwZONqk237KbRM8jMUqp6Ro0oEPaxkno+/tKVXfABL73t6MG7hfditcS9WMGJ5pOMZnL5FsdOggzeHaANT7kv5I6Gyx36809/ywJath6bGjFKBVxuqSli5zc2l8A3fmXqEial/KEFy3ufNiFTF1Plt+OQDBHjBxVvykMWpRQI/giqdZgScpzmuoXkhjWxXvFd3mHWNzPivJLF0EeiUB2DmNZ3OHFLhEXVzGmq1KiB7+HYF6ZWvAXDVvYqhtHG23bypF7HBqJ6fVgpLPzZpz5CaYG4P2FqAHONG4f9AZnpxXrmqMP6wtzrfoSHYnpjVV5LFo/R7eFsRnX+zVGCfqx5OpEcONpkiUIofDiLTLCNBuHoJLwnYIWtZYp6F4d/KkJOxJYQF/teaU="
+}
