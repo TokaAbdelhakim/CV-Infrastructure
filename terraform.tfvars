@@ -1,6 +1,5 @@
-Dev = "us-east-1"
-Staging = "us-east-2"
-Production = "us-west-1"
+my_region = "us-east-1"
 vpc-cidr = "10.0.0.0/16"
 private_subnet_cidr = "10.0.1.0/24"
 public_subnet_cidr = "10.0.2.0/24"
+private_db_subnet_cidr = "10.0.3.0/24"

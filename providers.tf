@@ -1,3 +1,3 @@
 provider "aws" {
-  	region = var.Dev 
+  	region = var.my_region
 }

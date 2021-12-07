@@ -1,12 +1,4 @@
-variable "Dev"{
-	type = string
-}
-
-variable "Staging"{
-	type = string
-}
-
-variable "Production"{
+variable "my_region"{
 	type = string
 }
 
@@ -20,4 +12,8 @@ variable "private_subnet_cidr"{
 
 variable "public_subnet_cidr"{
 	type = string
+}
+
+variable "private_db_subnet_cidr"{
+	type=string
 }
